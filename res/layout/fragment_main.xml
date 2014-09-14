@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="cn.org.octopus.action_bar.MainActivity$PlaceholderFragment" >
+
+	<LinearLayout 
+	    android:id="@+id/actionbar_visible"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="#00FF00"
+	    android:orientation="vertical">
+	    <TextView 
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_horizontal"
+	        android:text="控制 ActionBar 显示 和 隐藏"
+	        android:textStyle="bold"
+	        android:textSize="20dp"
+	        android:layout_margin="10dp"/>
+	    
+	    <LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal">
+			<Button 
+			    android:id="@+id/actionbar_show"
+			    android:layout_width="0dp"
+			    android:layout_weight="1"
+			    android:layout_height="wrap_content"
+			    android:gravity="center"
+			    android:layout_margin="10dp"
+			    android:textStyle="bold"
+			    android:text="显示 ActionBar"
+			    android:onClick="onClick"/>
+			
+			<Button 
+			    android:id="@+id/actionbar_hide"
+			    android:layout_width="0dp"
+			    android:layout_weight="1"
+			    android:layout_height="wrap_content"
+			    android:gravity="center"
+			    android:layout_margin="10dp"
+			    android:textStyle="bold"
+			    android:text="隐藏 ActionBar"
+			    android:onClick="onClick"/>			    
+		</LinearLayout>
+	    
+	</LinearLayout>
+	
+	<Button 
+	    android:id="@+id/tab_activity"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/actionbar_visible"
+	    android:layout_marginTop="30dp"
+	    android:padding="30dp"
+	    android:text="ActionBar Tab导航示例"
+	    android:textStyle="bold"
+	    android:textSize="20dp"
+	    android:background="@android:color/holo_blue_light"
+	    android:onClick="onClick"/>
+	
+	<Button 
+	    android:id="@+id/list_activity"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/tab_activity"
+	    android:layout_marginTop="30dp"
+	    android:padding="30dp"
+	    android:text="ActionBar List导航示例"
+	    android:textStyle="bold"
+	    android:textSize="20dp"
+	    android:background="@android:color/holo_orange_light"
+	    android:onClick="onClick"/>
+    
+</RelativeLayout>

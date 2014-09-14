@@ -1,0 +1,74 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="cn.org.octopus.action_bar.MainActivity" >
+	
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:title="@string/action_settings"/>
+    
+    <!-- 
+    	android:title 属性 : 显示名称 
+    	android:icon 属性 : 显示图标
+    	android:showAsAction 属性 : 设置是否在 ActionBar 中显示
+    -->
+    <item 
+        android:title="单选菜单"
+        android:showAsAction="always|withText|collapseActionView"
+        android:icon="@drawable/ic_launcher">
+        <menu>
+            <!-- android:checkableBehavior 属性 : 设置点击事件 -->
+            <group android:checkableBehavior="single">
+                <!-- 
+                	android:id 属性 : 用于标识 id
+                	android:title 属性 : 菜单显示的 标题
+                 -->
+                <item android:id="@+id/menu1_item1"
+                    android:title="menu1_item1"/>
+                <item android:id="@+id/menu1_item2"
+                    android:title="menu1_item2"/>
+                <item android:id="@+id/menu1_item3"
+                    android:title="menu1_item3"/>
+            </group>
+        </menu>
+    </item>
+	
+    <item 
+        android:id="@+id/menu3"
+        android:title="普通菜单"
+        android:showAsAction="always|withText"/>
+    
+    <item 
+        android:title="默认菜单"
+        android:showAsAction="always|withText|collapseActionView">
+        <menu>
+            <group>
+                <item android:id="@+id/menu2_item1"
+                    android:title="menu2_item1"/>
+                <item android:id="@+id/menu2_item2"
+                    android:title="menu2_item2"/>
+                <item android:id="@+id/menu2_item3"
+                    android:title="menu2_item3"/>
+            </group>
+        </menu>
+    </item>
+    
+    <!-- 
+    	android:orderInCategory 属性 : 表示优先级, 用于进行 item 排序 
+     -->
+    <item 
+        android:id="@+id/search"
+        android:title="搜索"
+        android:orderInCategory="100"
+        android:showAsAction="always"
+        android:actionViewClass="android.widget.SearchView"/>
+    
+    <item 
+        android:id="@+id/layout"
+        android:title="layout"
+        android:showAsAction="always"
+        android:orderInCategory="100"
+ 	    android:actionLayout="@layout/layout"/>
+    
+</menu>
